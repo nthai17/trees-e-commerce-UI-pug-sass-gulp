@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/roboto">
+    <title>PUG-SASS-GULP</title>
+  </head>
+  <body>
+    <div class="main-wrap">
+      <header class="header">
+        <div class="header__logo"><img src="/assets/img/logo.webp" alt="logo"></div>
+        <div class="header__sign"><a class="sign-in" href="javascript:void(0)">Đăng nhập</a><span class="separate">/</span><a class="sign-up" href="javascript:void(0)">Đăng ký</a></div>
+        <div class="header__cart"> <a class="cart-link">Giỏ hàng
+            <div class="cart-quantity">0</div></a></div>
+        <div class="header__search">
+          <input type="text" placeholder="Tìm kiếm ..."><span class="search-icon"><i class="fas fa-search"></i></span>
+        </div>
+        <div class="header__nav">
+          <nav class="nav">
+            <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Trang chủ</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Tất cả sản phẩm</a>
+                      <ul class="sub-nav">
+                              <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Sản phẩm nổi bật</a>
+                              </li>
+                              <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Sản phẩm khuyễn mại</a>
+                              </li>
+                              <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Cây văn phòng</a>
+                              </li>
+                              <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Cây để bàn</a>
+                              </li>
+                              <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Chậu trồng cây</a>
+                              </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Tin tức</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Về Ego Garden</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Liên hệ</a>
+                    </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="content">
+        <section class="responsive-nav"> <i class="fas fa-angle-double-right"></i></section>
+        <section class="home"><img src="./assets/img/home.jpg" alt=""><a class="btn-down" href="javascript:void(0)"><i class="fas fa-hand-point-down"></i></a></section>
+        <section class="banners grid">
+          <div class="banners-wrap row">
+                  <div class="col-12 col-md-6">
+                    <div class="banners-img"><img src="/assets/img/first-banner.jpg" alt="banners"></div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="banners-img"><img src="/assets/img/second-banner.jpg" alt="banners"></div>
+                  </div>
+          </div>
+        </section>
+        <section class="product grid">
+                <div class="section-header">
+                  <h2>Hàng mới về</h2><a href="javascript:void(0)">Xem tất cả</a>
+                </div>
+                <ul class="product__list row">
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/caykimtien.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây kim tiền</a><span class="item-price">145.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/caytuongquan.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây tướng quân</a><span class="item-price">145.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/camnhung.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây cẩm nhung</a><span class="item-price">145.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/hongmon.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây hồng môn</a><span class="item-price">145.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/lanbachy.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây lan bạch Ý</a><span class="item-price">135.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/luoiho.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây lưỡi hổ</a><span class="item-price">145.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/ngugiabi.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây ngũ gia bì</a><span class="item-price">115.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/traubanhat.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây trầu bà Nhật</a><span class="item-price">145.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/lanynhapkhau.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây lan Ý nhập khẩu</a><span class="item-price">245.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/sendakim.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây sen đá</a><span class="item-price">95.000</span></div>
+                          </div>
+                        </li>
+                </ul>
+        </section>
+        <section class="promotion grid"> 
+          <div class="sale-product__wrap row">
+            <div class="sale-header col-12 col-md-3"> 
+              <h2>Sản phẩm khuyến mãi</h2>
+              <p>Cùng săn những sản phẩm giá tốt nhất chỉ có tại Ego Garden</p>
+            </div>
+            <div class="sale-product col-12 col-md-9"> 
+                    <ul class="product__list row">
+                            <li class="product__item col-md-3 col-6">
+                              <div class="product__item-wrap">
+                                <div class="product__item-thumbnail"><span class="item-sale-persent">10%</span><a class="item-link" href="javacript:void(0)">
+                                    <div class="item-overlay">
+                                      <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                    </div><img class="item-img" src="/assets/img/ngugiabi.webp" alt="hinhanh"></a>
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div>
+                                <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây ngũ gia bì</a><span class="item-price">115.000</span></div>
+                              </div>
+                            </li>
+                            <li class="product__item col-md-3 col-6">
+                              <div class="product__item-wrap">
+                                <div class="product__item-thumbnail"><span class="item-sale-persent">10%</span><a class="item-link" href="javacript:void(0)">
+                                    <div class="item-overlay">
+                                      <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                    </div><img class="item-img" src="/assets/img/traubanhat.webp" alt="hinhanh"></a>
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div>
+                                <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây trầu bà Nhật</a><span class="item-price">145.000</span></div>
+                              </div>
+                            </li>
+                            <li class="product__item col-md-3 col-6">
+                              <div class="product__item-wrap">
+                                <div class="product__item-thumbnail"><span class="item-sale-persent">10%</span><a class="item-link" href="javacript:void(0)">
+                                    <div class="item-overlay">
+                                      <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                    </div><img class="item-img" src="/assets/img/lanynhapkhau.webp" alt="hinhanh"></a>
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div>
+                                <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây lan Ý nhập khẩu</a><span class="item-price">245.000</span></div>
+                              </div>
+                            </li>
+                            <li class="product__item col-md-3 col-6">
+                              <div class="product__item-wrap">
+                                <div class="product__item-thumbnail"><span class="item-sale-persent">10%</span><a class="item-link" href="javacript:void(0)">
+                                    <div class="item-overlay">
+                                      <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                    </div><img class="item-img" src="/assets/img/sendakim.webp" alt="hinhanh"></a>
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div>
+                                <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây sen đá</a><span class="item-price">95.000</span></div>
+                              </div>
+                            </li>
+                    </ul>
+            </div>
+          </div>
+        </section>
+        <section class="suggestion grid">
+                <div class="section-header">
+                  <h2>Có thể bạn thích</h2><a href="javascript:void(0)">Xem tất cả</a>
+                </div>
+                <ul class="product__list row">
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><span class="item-sale-persent">15%</span><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/luoiho.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây lưỡi hổ</a><span class="item-price">145.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><span class="item-sale-persent">10%</span><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/ngugiabi.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây ngũ gia bì</a><span class="item-price">115.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><span class="item-sale-persent">10%</span><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/traubanhat.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây trầu bà Nhật</a><span class="item-price">145.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><span class="item-sale-persent">10%</span><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/lanynhapkhau.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây lan Ý nhập khẩu</a><span class="item-price">245.000</span></div>
+                          </div>
+                        </li>
+                        <li class="product__item col-md-2-4 col-6">
+                          <div class="product__item-wrap">
+                            <div class="product__item-thumbnail"><span class="item-sale-persent">10%</span><a class="item-link" href="javacript:void(0)">
+                                <div class="item-overlay">
+                                  <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                                </div><img class="item-img" src="/assets/img/sendakim.webp" alt="hinhanh"></a>
+                              <div class="btn-addto-cart"><i class="fas fa-plus-circle"></i></div>
+                            </div>
+                            <div class="product__item-info"><a class="item-name" href="javacript:void(0)">Cây sen đá</a><span class="item-price">95.000</span></div>
+                          </div>
+                        </li>
+                </ul>
+        </section>
+        <section class="banners grid">
+          <div class="banners-wrap row">
+                  <div class="col-12 col-md-6">
+                    <div class="banners-img"><img src="/assets/img/third-banner.jpg" alt="banners"></div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="banners-img"><img src="/assets/img/four-banner.jpg" alt="banners"></div>
+                  </div>
+          </div>
+        </section>
+        <section class="comment grid"> 
+          <ul class="comment-list row"> 
+                  <li class="comment-item col-12 col-md-4">
+                    <div class="comment-wrap"> 
+                      <div class="comment-avt"><img src="/assets/img/author1.webp" alt="hinhanh"></div>
+                      <div class="comment-info"><span class="author-name">Linh Pham - </span><span class="author-work">Marketting</span></div>
+                      <p>Đã nhiều lần mua cây cảnh tại đây và cảm thấy rất ưng về chất lượng sản phẩm, mua cây mà còn được tặng cả phân bón cây luôn nhé, chủ shop dễ thương cực kỳ nạ.</p>
+                    </div>
+                  </li>
+                  <li class="comment-item col-12 col-md-4">
+                    <div class="comment-wrap"> 
+                      <div class="comment-avt"><img src="/assets/img/author2.webp" alt="hinhanh"></div>
+                      <div class="comment-info"><span class="author-name">Quynh Van - </span><span class="author-work">Sinh viên</span></div>
+                      <p>Em hay mua cây tại đây để tặng sinh nhật bạn, lần nào bạn cũng ưng nhé, chưa thấy cây nào trồng bị chết cả, chỉ được cái là sống rất khỏe bạn cứ khoe em hoài ấy ạ.</p>
+                    </div>
+                  </li>
+                  <li class="comment-item col-12 col-md-4">
+                    <div class="comment-wrap"> 
+                      <div class="comment-avt"><img src="/assets/img/author3.webp" alt="hinhanh"></div>
+                      <div class="comment-info"><span class="author-name">Tra My - </span><span class="author-work">Văn phòng</span></div>
+                      <p>Vừa rồi lên nhà mới mình có qua shop mua thử ít cây về để tiểu cảnh, ai cũng khen mua cây ở đâu đẹp thế lại còn xanh nữa, bữa nào em dẫn bạn đến đây mua nhiều nhiều nữa.</p>
+                    </div>
+                  </li>
+          </ul>
+        </section>
+        <section class="post grid">
+                <div class="section-header">
+                  <h2>Bài viết mới</h2><a href="javascript:void(0)">Xem tất cả</a>
+                </div>
+                <ul class="post__list row"> 
+                        <li class="post__item col-12 col-md-4">
+                          <div class="post__item-wrap">
+                            <div class="post__item-thumbnail"><a class="item-link" href="#"><img class="item-img" src="/assets/img/post-img1.webp" alt="hinhanh"></a></div>
+                            <div class="post__item-info"><a class="item-title" href="javacript:void(0)">
+                                <h3>Tuổi bính tý năm 1996 hợp cây gì?</h3></a><span class="item-time"><i class="fas fa-clock"></i><span>03/11/2021</span></span>
+                              <p>Cây phong thủy để bàn vốn luôn được biết đến là một loại cây được ưa chuộng và sử dụng rộng khắp trong cuộc sống thường ngày của chúng...</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="post__item col-12 col-md-4">
+                          <div class="post__item-wrap">
+                            <div class="post__item-thumbnail"><a class="item-link" href="#"><img class="item-img" src="/assets/img/post-img2.webp" alt="hinhanh"></a></div>
+                            <div class="post__item-info"><a class="item-title" href="javacript:void(0)">
+                                <h3>Tuổi giáp tuất năm 1994 hợp cây gì?</h3></a><span class="item-time"><i class="fas fa-clock"></i><span>03/11/2021</span></span>
+                              <p>Cây phong thủy để bàn vốn luôn được biết đến là một loại cây được ưa chuộng và sử dụng rộng khắp trong cuộc sống thường ngày của chúng...</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="post__item col-12 col-md-4">
+                          <div class="post__item-wrap">
+                            <div class="post__item-thumbnail"><a class="item-link" href="#"><img class="item-img" src="/assets/img/post-img3.webp" alt="hinhanh"></a></div>
+                            <div class="post__item-info"><a class="item-title" href="javacript:void(0)">
+                                <h3>Tuổi kỷ hợi năm 1995 hợp cây gì?</h3></a><span class="item-time"><i class="fas fa-clock"></i><span>03/11/2021</span></span>
+                              <p>Cây phong thủy để bàn vốn luôn được biết đến là một loại cây được ưa chuộng và sử dụng rộng khắp trong cuộc sống thường ngày của chúng...</p>
+                            </div>
+                          </div>
+                        </li>
+                </ul>
+        </section>
+        <section class="policy grid"> 
+          <ul class="row"> 
+                  <li class="col-md-3 col-6"><span> <i class="fas fa-dolly"></i><span>FREESHIP NỘI THÀNH</span></span></li>
+                  <li class="col-md-3 col-6"><span> <i class="fas fa-headphones-alt"></i><span>HỖ TRỢ 24/7</span></span></li>
+                  <li class="col-md-3 col-6"><span> <i class="fas fa-undo-alt"></i><span>ĐỔI TRẢ NHANH CHÓNG</span></span></li>
+                  <li class="col-md-3 col-6"><span> <i class="fas fa-piggy-bank"></i><span>ƯU ĐÃI CỰC LỚN</span></span></li>
+          </ul>
+        </section>
+        <footer class="footer grid"> 
+          <div class="row">
+            <div class="col-l-3 col-md-6 col-6 footer-contact">LIÊN HỆ 
+              <ul>
+                <li> 
+                  <div><i class="fas fa-map-marker-alt"></i></div><span>Nam Từ Liêm, Hà Nội</span>
+                </li>
+                <li> 
+                  <div><i class="fas fa-phone"></i></div><span>1900 9999</span>
+                </li>
+                <li>
+                  <div><i class="fas fa-envelope"></i></div><span>ego.deploy@gmail.com</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-l-3 col-md-6 col-6">VỀ CHÚNG TÔI
+              <ul>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Trang chủ</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Tất cả sản phẩm</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Tin tức</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Về Ego Garden</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Liên hệ</a>
+                      </li>
+              </ul>
+            </div>
+            <div class="col-l-3 col-md-6 col-6">THÔNG TIN
+              <ul>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Bài viết</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Tất cả sản phẩm</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Tin tức</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Về Ego Garden</a>
+                      </li>
+              </ul>
+            </div>
+            <div class="col-l-3 col-md-6 col-6">HỖ TRỢ
+              <ul>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Hotline</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Email</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-connect row"> 
+            <div class="mail-input col-12 col-md-6"> 
+              <input type="email" placeholder="Nhập email để nhận tin khuyến mãi">
+              <button><i class="fas fa-envelope"></i><span>GỬI NGAY</span></button>
+            </div>
+            <div class="connection col-12 col-md-5">
+              <div class="facebook connection-item"><a href="javascript:void(0)"><i class="fab fa-facebook-square"></i></a></div>
+              <div class="twitter connection-item"> <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></div>
+              <div class="google connection-item"> <a href="javascript:void(0)"><i class="fab fa-google"></i></a></div>
+              <div class="rss connection-item"><a href="javascript:void(0)"><i class="fas fa-rss"></i></a></div>
+              <div class="youtube connection-item"><a href="javascript:void(0)"><i class="fab fa-youtube"></i></a></div>
+            </div>
+          </div>
+          <div class="footer-copyright">Made by NTD</div>
+        </footer>
+      </main>
+    </div>
+    <script type="text/javascript">
+      let menubtn = document.querySelector('.responsive-nav')
+      menubtn.addEventListener("click", function(){
+      	let menu = document.querySelector('.header')
+      	if(menu.style.transform === "initial"){
+      		menu.style.setProperty('transform', 'translateX(-500px)');
+      	} else{
+      		menu.style.setProperty('transform', 'initial');
+      	}
+      	//- menu.style.cssText = "transform: translateX(0)"
+      	console.log(menu.style.transform)
+      })
+    </script>
+  </body>
+</html>

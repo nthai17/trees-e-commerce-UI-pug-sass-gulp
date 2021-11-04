@@ -1,0 +1,120 @@
+@use "../helper/variable";
+@use "./mixins";
+
+.header{
+    min-height: 100vh;
+    min-width: variable.$headerWidth;
+    background-color: variable.$backgroundColor;
+    border-right: 1px solid white;
+    padding: 20px 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    transition: all 0.5s ease;
+    @include mixins.Responsive(SM){
+        transform: translateX(-500px);
+    }
+    .header__logo{
+        max-width: 100%;
+        text-align: center;
+        img{
+            width: 80%;
+        }
+    }
+    .header__sign{
+        margin-top: 20px;
+        text-align: center;
+        a{
+            color: white;
+            font-size: 1.3rem;
+            &:hover{
+                color: variable.$mainColor;
+            }
+        }
+        span{
+            color: white;
+            margin: 0 10px;
+        }
+    }
+    .header__cart{
+        text-align: center;
+        a{
+            display: inline-flex;
+            color: white;
+            font-size: 1.3rem;
+            margin: 10px auto;
+            &:hover{
+                color: variable.$mainColor;
+                cursor: pointer;
+            }
+            &:hover .cart-quantity{
+                color: variable.$mainColor;
+                background-color: white;
+            }
+            .cart-quantity{
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background-color: variable.$mainColor;
+                text-align: center;
+                line-height: 18px;
+                margin-left: 10px;
+            }
+        }
+    }
+    .header__search{
+        background-color: white;
+        border-radius: 10px;
+        padding: 0 12px;
+        @include mixins.flexBox(space-between);
+        input{
+            border: none;
+            height: 30px;
+            outline: none;
+            flex-grow: 1;
+            padding-right: 8px;
+        }
+        span{
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+    }
+    .header__nav{
+        margin-top: 20px;
+        .nav-item{
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+            &:hover .sub-nav{
+                display: block;
+            }
+            .nav-link{
+                display: block;
+                position: relative;
+                color: white;
+                padding: 8px 0;
+                &:hover{
+                    color: variable.$mainColor;
+                }
+            }
+            .sub-nav{
+                display: none;
+                padding: 10px 20px 0;
+                animation: dropDown 0.3s ease;
+                .nav-item:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@keyframes dropDown {
+    from{
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}

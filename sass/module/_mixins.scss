@@ -1,0 +1,33 @@
+@mixin flexBox($justifyContent:center,$alignItem:center){
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+}
+
+@mixin circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+$XS:     479px;   
+$SM:     767px;  
+$MD:    991px;   
+$XL:   1199px;     
+
+// media queries
+
+@mixin Responsive($canvas) {
+  @if $canvas == XS {
+   @media only screen and (max-width: $XS) { @content; } 
+  }
+  @else if $canvas == SM {
+   @media only screen and (max-width: $SM) { @content; } 
+  }
+  @else if $canvas == MD {
+   @media only screen and (max-width: $MD) { @content; } 
+  }
+  @else if $canvas == XL {
+   @media only screen and (max-width: $XL) { @content; } 
+  }
+}

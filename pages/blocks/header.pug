@@ -1,0 +1,29 @@
+include ./mixins
+header.header
+    .header__logo
+        img(src="/assets/img/logo.webp", alt="logo")
+    .header__sign
+        a.sign-in(href="javascript:void(0)") Đăng nhập
+        span.separate /
+        a.sign-up(href="javascript:void(0)") Đăng ký
+    .header__cart 
+        a.cart-link Giỏ hàng
+            .cart-quantity 0
+    .header__search
+        input(type="text" placeholder="Tìm kiếm ...")
+        span.search-icon
+            i(class="fas fa-search")
+    .header__nav
+        nav.nav
+            ul.nav-list
+                +NavItem("Trang chủ")
+                +NavItem("Tất cả sản phẩm")
+                    ul.sub-nav
+                        +NavItem("Sản phẩm nổi bật")
+                        +NavItem("Sản phẩm khuyễn mại")
+                        +NavItem("Cây văn phòng")
+                        +NavItem("Cây để bàn")
+                        +NavItem("Chậu trồng cây")
+                +NavItem("Tin tức")
+                +NavItem("Về Ego Garden")
+                +NavItem("Liên hệ")

@@ -1,0 +1,87 @@
+mixin ProductItem(salePersent, imgSrc, itemName, itemPrice)
+	li(class="product__item")&attributes(attributes)
+		.product__item-wrap
+			.product__item-thumbnail
+				if(salePersent)
+					span.item-sale-persent= salePersent
+				a.item-link(href="javacript:void(0)")
+					.item-overlay
+						.btn-addto-cart
+							i(class="fas fa-plus-circle")
+					img(class="item-img" src=imgSrc alt="hinhanh")
+				.btn-addto-cart
+					i(class="fas fa-plus-circle")
+			.product__item-info
+				a.item-name(href="javacript:void(0)")= itemName
+				span.item-price= itemPrice
+
+
+mixin ProductList(list)
+	ul.product__list.row
+		each val in list
+			+ProductItem(val.salePersent, val.imgSrc, val.itemName, val.itemPrice)(class="col-md-2-4 col-6")
+
+
+mixin ProductSaleList(list)
+	ul.product__list.row
+		each val in list
+			+ProductItem(val.salePersent, val.imgSrc, val.itemName, val.itemPrice)(class="col-md-3 col-6")
+
+
+
+mixin PostItem(title, time, desc, img)
+	li(class="post__item")&attributes(attributes)
+		.post__item-wrap
+			.post__item-thumbnail
+				a.item-link(href="#")
+					img(class="item-img" src=img alt="hinhanh")
+			.post__item-info
+				a.item-title(href="javacript:void(0)")
+					h3= title
+				span.item-time
+					i(class="fas fa-clock")
+					span= time
+				p= desc
+
+
+mixin PostList(list)
+	ul.post__list.row 
+		each val in list
+			+PostItem(val.title, val.time, val.desc, val.img)(class="col-12 col-md-4")
+
+			
+
+mixin NavItem(text)
+	li(class="nav-item")
+		a.nav-link(href="javascript:void(0)")= text
+		if block 
+			block
+
+
+mixin Banners(img)
+	div.col-12.col-md-6
+		div.banners-img
+			img(src=img, alt="banners")
+
+
+mixin SectionHeader(heading)
+	.section-header
+		h2= heading
+		a(href="javascript:void(0)") Xem tất cả
+
+
+mixin CommentItem(comment)
+	li(class="comment-item")&attributes(attributes)
+		.comment-wrap 
+			.comment-avt
+				img(src=comment.avt alt="hinhanh")
+			.comment-info
+				span.author-name= comment.name + " - "
+				span.author-work= comment.work
+			p= comment.cmt
+
+mixin PolicyItem(policy, icon)
+	li(class="col-md-3 col-6")
+		span 
+			i(class= icon)
+			span= policy

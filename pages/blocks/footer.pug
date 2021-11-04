@@ -1,0 +1,56 @@
+footer.footer.grid 
+    .row
+        .col-l-3.col-md-6.col-6.footer-contact LIÊN HỆ 
+            ul
+                li 
+                    div
+                        i(class="fas fa-map-marker-alt")
+                    span Nam Từ Liêm, Hà Nội
+                li 
+                    div
+                        i(class="fas fa-phone")
+                    span 1900 9999
+                li
+                    div
+                        i(class="fas fa-envelope")
+                    span ego.deploy@gmail.com
+        .col-l-3.col-md-6.col-6 VỀ CHÚNG TÔI
+            ul
+                +NavItem("Trang chủ")
+                +NavItem("Tất cả sản phẩm")
+                +NavItem("Tin tức")
+                +NavItem("Về Ego Garden")
+                +NavItem("Liên hệ")
+        .col-l-3.col-md-6.col-6 THÔNG TIN
+            ul
+                +NavItem("Bài viết")
+                +NavItem("Tất cả sản phẩm")
+                +NavItem("Tin tức")
+                +NavItem("Về Ego Garden")
+        .col-l-3.col-md-6.col-6 HỖ TRỢ
+            ul
+                +NavItem("Hotline")
+                +NavItem("Email")
+    .footer-connect.row 
+        .mail-input.col-12.col-md-6 
+            input(type="email" placeholder="Nhập email để nhận tin khuyến mãi")
+            button
+                i(class="fas fa-envelope")
+                span GỬI NGAY
+        .connection.col-12.col-md-5
+            .facebook.connection-item
+                a(href="javascript:void(0)")
+                    i(class="fab fa-facebook-square")
+            .twitter.connection-item 
+                a(href="javascript:void(0)")
+                    i(class="fab fa-twitter")
+            .google.connection-item 
+                a(href="javascript:void(0)")
+                    i(class="fab fa-google")
+            .rss.connection-item
+                a(href="javascript:void(0)")
+                    i(class="fas fa-rss")
+            .youtube.connection-item
+                a(href="javascript:void(0)")
+                    i(class="fab fa-youtube")
+    .footer-copyright Made by NTD

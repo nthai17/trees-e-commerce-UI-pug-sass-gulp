@@ -1,0 +1,364 @@
+@use './helper/variable';
+@use './helper/base';
+@use './module/header';
+@use './module/footer';
+@use './module/mixins';
+
+
+.main-wrap{
+    @include mixins.flexBox($alignItem:flex-start);
+    .content{
+        margin-left: variable.$headerWidth;
+        @include mixins.Responsive(SM){
+            margin-left: 0
+        }
+        .responsive-nav{
+            height: variable.$headerHeight;
+            background-color: rgba(255, 255, 255, 0.753);
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: variable.$headerHeight;
+            text-align: right;
+            z-index: 5;
+            border-bottom-left-radius: 40%;
+            border-top-left-radius: 40%;
+            @include mixins.flexBox;
+            display: none;
+            i{
+                font-size: 2.7rem;
+                color: variable.$mainColor
+            }
+            @include mixins.Responsive(SM){
+                display: flex;
+            }
+        }
+        .home{
+            position: relative;
+            margin-bottom: 16px;
+            img{
+                width: 100%;
+            }
+            .btn-down{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 50px;
+                border: 1px dashed variable.$borderColor;
+                height: 60px;
+                width: 40px;
+                border-radius: 40px;
+                @include mixins.flexBox;
+                i{
+                    font-size: 1.8rem;
+                    color: white;
+                }
+                @include mixins.Responsive(SM){
+                    bottom: 30px;
+                }
+            }
+        }
+        .banners{
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            .banners-wrap{
+                div{
+                    .banners-img{
+                        cursor: pointer;
+                        overflow: hidden;
+                        &:hover img{
+                            transform: scale(1.1);
+                        }
+                        img{
+                            display: block;
+                            width: 100%;
+                            transition: all 0.3s ease;
+                        }
+                    }
+                }
+                & > div:last-child{
+                    @include mixins.Responsive(SM){
+                        margin-top: 20px;
+                        margin-bottom: 20px
+                    };
+                }
+            }
+        }
+        .section-header{
+            @include mixins.flexBox($justifyContent:space-between);
+            a{
+                color: variable.$textColor;
+                font-size: 1.3rem;
+                &:hover{
+                    color: variable.$hoverColor;
+                }
+            }
+            @include mixins.Responsive(SM){
+                margin-bottom: 18px;
+                h2{
+                    margin-top:0;
+                    margin-bottom: 0;
+                }
+                a{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        .promotion{
+            background-image: url("/assets/img/salebg.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top:70px;
+            padding-bottom:70px;
+            margin-bottom: 10px;
+            @include mixins.Responsive(SM){
+                padding-top:20px;
+                padding-bottom:20px;
+                & .sale-product .product__list {
+                    margin-left: -8px;
+                    margin-right: -8px
+                }
+            };
+            .sale-header{
+                h2{
+                    line-height: 32px;
+                    margin-bottom: 12px;
+                }
+                p{
+                    font: {
+                        size: 1.4rem;
+                        weight: 700
+                    }
+                    line-height: 1.5;
+                    margin-top: 12px;
+                    @include mixins.Responsive(SM){
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            
+        }
+        .comment{
+            background-image: url('/assets/img/commentbg.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 70px;
+            padding-bottom: 70px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            @include mixins.Responsive(SM){
+                padding-top: 30px;
+                padding-bottom: 30px;
+                margin-top: 0;
+            }
+            .comment-list{
+                .comment-item{
+                    user-select: none;
+                    @include mixins.Responsive(SM){
+                        margin-top: 36px;
+                    }
+                    .comment-wrap{
+                        background-color: white;
+                        position: relative;
+                        padding: 40px 10px;
+                        .comment-avt{
+                            position: absolute;
+                            top: -25px;
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .comment-info{
+                            margin-bottom: 10px;
+                            .author-name{
+                                color: variable.$mainColor;
+                                font-size: 1.3rem;
+                            }
+                            .author-work{
+                                font-size: 1.3rem;
+                                font-style: italic;
+                            }
+                        }
+                        p{
+                            font-size: 1.3rem;
+                            line-height: 1.5;
+                            color: #666;
+                        }
+                    }
+                }
+            }
+        }
+        .post{
+            .post__item{
+                @include mixins.Responsive(SM){
+                    margin-top: 20px;
+                }
+                .post__item-wrap{
+                    @include mixins.Responsive(SM){
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid variable.$borderColor;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    .post__item-info{
+                        .item-title{
+                            color: variable.$textColor;
+                            font-size: 1.3rem;
+                            h3{
+                                margin-bottom: 12px;
+                                margin-top: 8px;
+                            }
+                        }
+                        .item-time{
+                            font-size: 1.3rem;
+                            color: variable.$textColor;
+                            i{
+                                opacity: 0.6;
+                                margin-right: 4px;
+                            }
+                        }
+                        p{
+                            font-size: 1.3rem;
+                            margin-top: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .policy{
+            margin-top: 42px;
+            margin-bottom: 22px;
+            ul{
+                li{
+                    text-align: center;
+                    font-size: 1.5rem;
+                    color: variable.$mainColor;
+                    span{
+                        i{
+                            margin-right: 10px;
+                        }
+                        span{
+                            color: black;
+                            font-size: 1.4rem;
+                        }
+                    }
+                    @include mixins.Responsive(SM){
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+.product__item{
+    margin-bottom: 24px;
+    &-wrap{
+        background-color: white;
+        border: 1px solid variable.$borderColor;
+        .product__item-thumbnail{
+            position: relative;
+            .item-sale-persent{
+                background-color: red;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 1.5rem;
+                display: block;
+                border-radius: 5px;
+                border-top-left-radius: unset;
+                padding: 2px;
+                z-index: 1;
+            }
+            .item-link{
+                display: block;
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                &:hover img{
+                    transform: scale(1.1);
+                }
+                &:hover .item-overlay{
+                    display: flex;
+                }
+                .item-overlay{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(204, 204, 204, 0.349);
+                    z-index: 2;
+                    @include mixins.flexBox;
+                    display: none;
+                    .btn-addto-cart{
+                        background-color: white;
+                        @include mixins.circle;
+                        @include mixins.flexBox;
+                        &:hover{
+                            background-color: variable.$mainColor;
+                        }
+                        &:hover i{
+                            color: white;
+                        }
+                        i{
+                            font-size: 1.8rem;
+                            color: variable.$mainColor;
+                        }
+                    }
+                }
+                img{
+                    width: 100%;
+                    transition: all 0.3s ease;
+                }
+            }
+            & > .btn-addto-cart{
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                background-color: variable.$mainColor;
+                z-index: 3;
+                @include mixins.circle;
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+                @include mixins.flexBox;
+                i{
+                    font-size: 1.8rem;
+                    color: white;
+                }
+            }
+        }
+        .product__item-info{
+            padding: 12px;
+            @include mixins.flexBox;
+            flex-direction: column;
+            .item-name{
+                color: variable.$textColor;
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                &:hover{
+                    color: variable.$mainColor;
+                }
+            }
+            .item-price{
+                color: variable.$mainColor;
+                font: {
+                    size: 1.4rem;
+                    weight: 700
+                }
+            }
+        }
+    }
+        
+}
+
+

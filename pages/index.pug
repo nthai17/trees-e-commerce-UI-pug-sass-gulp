@@ -1,0 +1,61 @@
+extends layout/layout
+
+block container
+	include ./blocks/var
+	main.content
+		section.responsive-nav 
+			i(class="fas fa-angle-double-right")
+		section.home
+			img(src="./assets/img/home.jpg", alt="")
+			a.btn-down(href="javascript:void(0)")
+				i(class="fas fa-hand-point-down")
+		section.banners.grid
+			div.banners-wrap.row
+				+Banners("/assets/img/first-banner.jpg")
+				+Banners("/assets/img/second-banner.jpg")
+		section.product.grid
+			+SectionHeader("Hàng mới về")
+			+ProductList(listNewProduct)
+		section.promotion.grid 
+			div.sale-product__wrap.row
+				.sale-header.col-12.col-md-3 
+					h2 Sản phẩm khuyến mãi
+					p Cùng săn những sản phẩm giá tốt nhất chỉ có tại Ego Garden
+				div.sale-product.col-12.col-md-9 
+					+ProductSaleList(listSaleProduct)
+		section.suggestion.grid
+			+SectionHeader("Có thể bạn thích")
+			+ProductList(listSuggest)
+		section.banners.grid
+			div.banners-wrap.row
+				+Banners("/assets/img/third-banner.jpg")
+				+Banners("/assets/img/four-banner.jpg")
+		section.comment.grid 
+			ul.comment-list.row 
+				+CommentItem(listComment[0])(class="col-12 col-md-4")
+				+CommentItem(listComment[1])(class="col-12 col-md-4")
+				+CommentItem(listComment[2])(class="col-12 col-md-4")
+		section.post.grid
+			+SectionHeader("Bài viết mới")
+			+PostList(listPost)
+		section.policy.grid 
+			ul.row 
+				+PolicyItem("FREESHIP NỘI THÀNH", "fas fa-dolly")
+				+PolicyItem("HỖ TRỢ 24/7", "fas fa-headphones-alt")
+				+PolicyItem("ĐỔI TRẢ NHANH CHÓNG", "fas fa-undo-alt")
+				+PolicyItem("ƯU ĐÃI CỰC LỚN", "fas fa-piggy-bank")
+		include ./blocks/footer
+
+block script
+	script(type='text/javascript').
+		let menubtn = document.querySelector('.responsive-nav')
+		menubtn.addEventListener("click", function(){
+			let menu = document.querySelector('.header')
+			if(menu.style.transform === "initial"){
+				menu.style.setProperty('transform', 'translateX(-500px)');
+			} else{
+				menu.style.setProperty('transform', 'initial');
+			}
+			//- menu.style.cssText = "transform: translateX(0)"
+			console.log(menu.style.transform)
+		})
