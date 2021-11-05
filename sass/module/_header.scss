@@ -13,9 +13,7 @@
     bottom: 0;
     z-index: 20;
     transition: all 0.5s ease;
-    @include mixins.Responsive(SM){
-        transform: translateX(-500px);
-    }
+    
     .header__logo{
         max-width: 100%;
         text-align: center;
@@ -93,7 +91,7 @@
                 display: block;
                 position: relative;
                 color: white;
-                padding: 8px 0;
+                padding: 12px 0;
                 &:hover{
                     color: variable.$mainColor;
                 }
@@ -106,6 +104,51 @@
                     margin-bottom: 0;
                 }
             }
+        }
+    }
+    @include mixins.Responsive(SM){
+        transform: translateX(-500px);
+        min-width: 500px;
+        a{
+            font-size: 2rem;
+        }
+        ul{
+            padding: 20px;
+            li{
+                padding: 10px 0;
+            }
+        }
+        .header__sign, .header__cart{
+            margin-bottom: 10px;
+            a{
+                font-size: 1.8rem;
+            }
+        }
+        .header__search{
+            height: 48px;
+            border-radius: 20px;
+            input{
+                font-size: 1.8rem;
+            }
+            span{
+                font-size: 2rem;
+                padding: 10px;
+            }
+        }
+    }
+    @include mixins.Responsive(XS){
+        min-width: 300px;
+        ul{
+            padding: 20px;
+            li{
+                padding: 0;
+                a{
+                    padding: 12px 0;
+                }
+            }
+        }
+        a{
+            font-size: 1.8rem;
         }
     }
 }

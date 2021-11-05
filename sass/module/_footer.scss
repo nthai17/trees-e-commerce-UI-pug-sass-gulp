@@ -16,6 +16,17 @@
                     @include mixins.flexBox;
                     flex-direction: column
                 }
+                &.footer-contact ul div{
+                    margin-bottom: 0;
+                }
+            }
+            @include mixins.Responsive(SM){
+                font-size: 2rem;
+                margin-bottom: 16px;
+            }
+            @include mixins.Responsive(XS){
+                font-size: 1.6rem;
+                margin-bottom: 10px;
             }
             ul{
                 margin-top: 10px;
@@ -41,6 +52,15 @@
                         background-color: variable.$mainColor;
                         @include mixins.flexBox;
                         margin-right: 10px
+                    }
+                    @include mixins.Responsive(SM){
+                        font-size: 1.6rem;
+                        padding: 12px 0;
+                        font-weight: 300;
+                    }
+                    @include mixins.Responsive(XS){
+                        font-size: 1.3rem;
+                        padding: 8px 0;
                     }
                 }
             }

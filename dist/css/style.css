@@ -54,7 +54,7 @@ h2 {
   padding-left: 8px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .col-md-2-4 {
     width: 20%;
     padding-right: 8px;
@@ -115,11 +115,6 @@ h2 {
   bottom: 0;
   z-index: 20;
   transition: all 0.5s ease;
-}
-@media only screen and (max-width: 768px) {
-  .header {
-    transform: translateX(-500px);
-  }
 }
 .header .header__logo {
   max-width: 100%;
@@ -202,7 +197,7 @@ h2 {
   display: block;
   position: relative;
   color: white;
-  padding: 8px 0;
+  padding: 12px 0;
 }
 .header .header__nav .nav-item .nav-link:hover {
   color: #3bb500;
@@ -214,6 +209,55 @@ h2 {
 }
 .header .header__nav .nav-item .sub-nav .nav-item:last-child {
   margin-bottom: 0;
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    transform: translateX(-500px);
+    min-width: 500px;
+  }
+  .header a {
+    font-size: 2rem;
+  }
+  .header ul {
+    padding: 20px;
+  }
+  .header ul li {
+    padding: 10px 0;
+  }
+  .header .header__sign, .header .header__cart {
+    margin-bottom: 10px;
+  }
+  .header .header__sign a, .header .header__cart a {
+    font-size: 1.8rem;
+  }
+  .header .header__search {
+    height: 48px;
+    border-radius: 20px;
+  }
+  .header .header__search input {
+    font-size: 1.8rem;
+  }
+  .header .header__search span {
+    font-size: 2rem;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .header {
+    min-width: 300px;
+  }
+  .header ul {
+    padding: 20px;
+  }
+  .header ul li {
+    padding: 0;
+  }
+  .header ul li a {
+    padding: 12px 0;
+  }
+  .header a {
+    font-size: 1.8rem;
+  }
 }
 
 @keyframes dropDown {
@@ -243,6 +287,21 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .footer div div.footer-contact ul div {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer div div {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .footer div div {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
   }
 }
 .footer div div ul {
@@ -277,6 +336,19 @@ h2 {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .footer div div ul li {
+    font-size: 1.6rem;
+    padding: 12px 0;
+    font-weight: 300;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .footer div div ul li {
+    font-size: 1.3rem;
+    padding: 8px 0;
+  }
 }
 .footer .footer-connect {
   margin-top: 50px;
@@ -389,21 +461,13 @@ h2 {
   justify-content: center;
   align-items: flex-start;
 }
-.main-wrap .content {
-  margin-left: 300px;
-}
-@media only screen and (max-width: 768px) {
-  .main-wrap .content {
-    margin-left: 0;
-  }
-}
-.main-wrap .content .responsive-nav {
+.main-wrap .responsive-nav {
   height: 60px;
+  width: 60px;
   background-color: rgba(255, 255, 255, 0.753);
   position: fixed;
   top: 0;
   right: 0;
-  width: 60px;
   text-align: right;
   z-index: 5;
   border-bottom-left-radius: 40%;
@@ -413,13 +477,29 @@ h2 {
   align-items: center;
   display: none;
 }
-.main-wrap .content .responsive-nav i {
+.main-wrap .responsive-nav i {
   font-size: 2.7rem;
   color: #3bb500;
 }
 @media only screen and (max-width: 768px) {
-  .main-wrap .content .responsive-nav {
+  .main-wrap .responsive-nav {
     display: flex;
+    width: 80px;
+    height: 80px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .main-wrap .responsive-nav {
+    height: 60px;
+    width: 60px;
+  }
+}
+.main-wrap .content {
+  margin-left: 300px;
+}
+@media only screen and (max-width: 768px) {
+  .main-wrap .content {
+    margin-left: 0;
   }
 }
 .main-wrap .content .home {
@@ -449,6 +529,20 @@ h2 {
 @media only screen and (max-width: 768px) {
   .main-wrap .content .home .btn-down {
     bottom: 30px;
+    height: 90px;
+    width: 60px;
+  }
+  .main-wrap .content .home .btn-down i {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .main-wrap .content .home .btn-down {
+    height: 60px;
+    width: 40px;
+  }
+  .main-wrap .content .home .btn-down i {
+    font-size: 1.8rem;
   }
 }
 .main-wrap .content .banners {
@@ -492,9 +586,18 @@ h2 {
   .main-wrap .content .section-header h2 {
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 3rem;
   }
   .main-wrap .content .section-header a {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .main-wrap .content .section-header a {
     font-size: 1.4rem;
+  }
+  .main-wrap .content .section-header h2 {
+    font-size: 2.4rem;
   }
 }
 .main-wrap .content .promotion {
@@ -526,9 +629,21 @@ h2 {
   margin-top: 12px;
 }
 @media only screen and (max-width: 768px) {
+  .main-wrap .content .promotion .sale-header h2 {
+    font-size: 3rem;
+  }
   .main-wrap .content .promotion .sale-header p {
     font-weight: 500;
     margin-bottom: 10px;
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .main-wrap .content .promotion .sale-header h2 {
+    font-size: 2.4rem;
+  }
+  .main-wrap .content .promotion .sale-header p {
+    font-size: 1.4rem;
   }
 }
 .main-wrap .content .comment {
@@ -588,6 +703,16 @@ h2 {
   color: #666;
 }
 @media only screen and (max-width: 768px) {
+  .main-wrap .content .comment .comment-list .comment-item .comment-wrap .comment-info .author-name, .main-wrap .content .comment .comment-list .comment-item .comment-wrap .comment-info .author-work, .main-wrap .content .comment .comment-list .comment-item .comment-wrap p {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .main-wrap .content .comment .comment-list .comment-item .comment-wrap .comment-info .author-name, .main-wrap .content .comment .comment-list .comment-item .comment-wrap .comment-info .author-work, .main-wrap .content .comment .comment-list .comment-item .comment-wrap p {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
   .main-wrap .content .post .post__item {
     margin-top: 20px;
   }
@@ -620,6 +745,23 @@ h2 {
 .main-wrap .content .post .post__item .post__item-wrap .post__item-info p {
   font-size: 1.3rem;
   margin-top: 12px;
+}
+@media only screen and (max-width: 768px) {
+  .main-wrap .content .post .post__item .post__item-wrap .post__item-info .item-title h3 {
+    font-size: 1.8rem;
+  }
+  .main-wrap .content .post .post__item .post__item-wrap .post__item-info .item-time, .main-wrap .content .post .post__item .post__item-wrap .post__item-info p {
+    font-size: 1.7rem;
+    line-height: 1.7;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .main-wrap .content .post .post__item .post__item-wrap .post__item-info .item-title h3 {
+    font-size: initial;
+  }
+  .main-wrap .content .post .post__item .post__item-wrap .post__item-info .item-time, .main-wrap .content .post .post__item .post__item-wrap .post__item-info p {
+    font-size: 1.5rem;
+  }
 }
 .main-wrap .content .policy {
   margin-top: 42px;
@@ -732,11 +874,31 @@ h2 {
 @media only screen and (max-width: 768px) {
   .product__item-wrap .product__item-thumbnail > .btn-addto-cart {
     display: flex;
+    width: 80px;
+    height: 80px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .product__item-wrap .product__item-thumbnail > .btn-addto-cart {
+    width: 50px;
+    height: 50px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 .product__item-wrap .product__item-thumbnail > .btn-addto-cart i {
   font-size: 1.8rem;
   color: white;
+}
+@media only screen and (max-width: 768px) {
+  .product__item-wrap .product__item-thumbnail > .btn-addto-cart i {
+    font-size: 3.6rem;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .product__item-wrap .product__item-thumbnail > .btn-addto-cart i {
+    font-size: 1.8rem;
+  }
 }
 .product__item-wrap .product__item-info {
   padding: 12px;
@@ -757,8 +919,30 @@ h2 {
 .product__item-wrap .product__item-info .item-name:hover {
   color: #3bb500;
 }
+@media only screen and (max-width: 768px) {
+  .product__item-wrap .product__item-info .item-name {
+    font-size: 2.4rem;
+    padding: 10px 0;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .product__item-wrap .product__item-info .item-name {
+    font-size: 1.4rem;
+    padding: unset;
+  }
+}
 .product__item-wrap .product__item-info .item-price {
   color: #3bb500;
   font-size: 1.4rem;
   font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+  .product__item-wrap .product__item-info .item-price {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .product__item-wrap .product__item-info .item-price {
+    font-size: 1.4rem;
+  }
 }

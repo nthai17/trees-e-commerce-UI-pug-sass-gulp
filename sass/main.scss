@@ -7,31 +7,37 @@
 
 .main-wrap{
     @include mixins.flexBox($alignItem:flex-start);
+    .responsive-nav{
+        height: variable.$headerHeight;
+        width: variable.$headerHeight;
+        background-color: rgba(255, 255, 255, 0.753);
+        position: fixed;
+        top: 0;
+        right: 0;
+        text-align: right;
+        z-index: 5;
+        border-bottom-left-radius: 40%;
+        border-top-left-radius: 40%;
+        @include mixins.flexBox;
+        display: none;
+        i{
+            font-size: 2.7rem;
+            color: variable.$mainColor
+        }
+        @include mixins.Responsive(SM){
+            display: flex;
+            width: 80px;
+            height: 80px;
+        }
+        @include mixins.Responsive(XS){
+            height: variable.$headerHeight;
+            width: variable.$headerHeight;
+        }
+    }
     .content{
         margin-left: variable.$headerWidth;
         @include mixins.Responsive(SM){
             margin-left: 0
-        }
-        .responsive-nav{
-            height: variable.$headerHeight;
-            background-color: rgba(255, 255, 255, 0.753);
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: variable.$headerHeight;
-            text-align: right;
-            z-index: 5;
-            border-bottom-left-radius: 40%;
-            border-top-left-radius: 40%;
-            @include mixins.flexBox;
-            display: none;
-            i{
-                font-size: 2.7rem;
-                color: variable.$mainColor
-            }
-            @include mixins.Responsive(SM){
-                display: flex;
-            }
         }
         .home{
             position: relative;
@@ -55,6 +61,18 @@
                 }
                 @include mixins.Responsive(SM){
                     bottom: 30px;
+                    height: 90px;
+                    width: 60px;
+                    i{
+                        font-size: 2.8rem;
+                    }
+                }
+                @include mixins.Responsive(XS){
+                    height: 60px;
+                    width: 40px;
+                    i{
+                        font-size: 1.8rem;
+                    }
                 }
             }
         }
@@ -98,9 +116,18 @@
                 h2{
                     margin-top:0;
                     margin-bottom: 0;
+                    font-size: 3rem;
                 }
                 a{
+                    font-size: 2rem;
+                }
+            }
+            @include mixins.Responsive(XS){
+                a{
                     font-size: 1.4rem;
+                }
+                h2{
+                    font-size: 2.4rem;
                 }
             }
         }
@@ -118,7 +145,7 @@
                     margin-left: -8px;
                     margin-right: -8px
                 }
-            };
+            }
             .sale-header{
                 h2{
                     line-height: 32px;
@@ -131,13 +158,26 @@
                     }
                     line-height: 1.5;
                     margin-top: 12px;
-                    @include mixins.Responsive(SM){
+                }
+                @include mixins.Responsive(SM){
+                    h2{
+                        font-size: 3rem;
+                    }
+                    p{
                         font-weight: 500;
                         margin-bottom: 10px;
+                        font-size: 2.2rem;
+                    }
+                }
+                @include mixins.Responsive(XS){
+                    h2{
+                        font-size: 2.4rem;
+                    }
+                    p{
+                        font-size: 1.4rem;
                     }
                 }
             }
-            
         }
         .comment{
             background-image: url('../assets/img/commentbg.webp');
@@ -189,6 +229,16 @@
                             line-height: 1.5;
                             color: #666;
                         }
+                        @include mixins.Responsive(SM){
+                            .comment-info .author-name, .comment-info .author-work, p{
+                                font-size: 1.7rem;
+                            }
+                        }
+                        @include mixins.Responsive(XS){
+                            .comment-info .author-name, .comment-info .author-work, p{
+                                font-size: 1.5rem;
+                            }
+                        }
                     }
                 }
             }
@@ -226,6 +276,23 @@
                         p{
                             font-size: 1.3rem;
                             margin-top: 12px;
+                        }
+                        @include mixins.Responsive(SM){
+                            .item-title h3{
+                                font-size: 1.8rem;
+                            }
+                            .item-time, p{
+                                font-size: 1.7rem;
+                                line-height: 1.7;
+                            }
+                        }
+                        @include mixins.Responsive(XS){
+                            .item-title h3{
+                                font-size: initial;
+                            }
+                            .item-time, p{
+                                font-size: 1.5rem;
+                            }
                         }
                     }
                 }
@@ -330,10 +397,24 @@
                 display: none;
                 @include mixins.Responsive(SM){
                     display: flex;
+                    width: 80px;
+                    height: 80px;
+                }
+                @include mixins.Responsive(XS){
+                    width: 50px;
+                    height: 50px;
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
                 }
                 i{
                     font-size: 1.8rem;
                     color: white;
+                    @include mixins.Responsive(SM){
+                        font-size: 3.6rem;
+                    }
+                    @include mixins.Responsive(XS){
+                        font-size: 1.8rem;
+                    }
                 }
             }
         }
@@ -352,12 +433,26 @@
                 &:hover{
                     color: variable.$mainColor;
                 }
+                @include mixins.Responsive(SM){
+                    font-size: 2.4rem;
+                    padding: 10px 0;
+                }
+                @include mixins.Responsive(XS){
+                    font-size: 1.4rem;
+                    padding: unset;
+                }
             }
             .item-price{
                 color: variable.$mainColor;
                 font: {
                     size: 1.4rem;
                     weight: 700
+                }
+                @include mixins.Responsive(SM){
+                    font-size: 2.4rem;
+                }
+                @include mixins.Responsive(XS){
+                    font-size: 1.4rem;
                 }
             }
         }
