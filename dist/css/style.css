@@ -498,7 +498,7 @@ h2 {
   }
 }
 .main-wrap .content .promotion {
-  background-image: url("/assets/img/salebg.webp");
+  background-image: url("../assets/img/salebg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 70px;
@@ -532,7 +532,7 @@ h2 {
   }
 }
 .main-wrap .content .comment {
-  background-image: url("/assets/img/commentbg.webp");
+  background-image: url("../assets/img/commentbg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 70px;
