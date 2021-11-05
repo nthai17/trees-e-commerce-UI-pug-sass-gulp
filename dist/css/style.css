@@ -232,7 +232,7 @@ h2 {
   color: white;
   font-size: 1.5rem;
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 992px) {
   .footer div div {
     font-weight: 700;
     margin-bottom: 10px;
@@ -292,7 +292,7 @@ h2 {
   overflow: hidden;
   margin-left: 12px;
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 992px) {
   .footer .footer-connect .mail-input {
     flex-direction: column;
     margin-right: 12px;
@@ -319,7 +319,7 @@ h2 {
   color: white;
   background-color: #3bb500;
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 992px) {
   .footer .footer-connect .mail-input button {
     height: 40px;
     border-radius: 20px;

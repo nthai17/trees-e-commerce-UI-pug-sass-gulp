@@ -6,13 +6,13 @@ block container
 		section.responsive-nav 
 			i(class="fas fa-angle-double-right")
 		section.home
-			img(src=".dist/assets/img/home.jpg", alt="")
+			img(src="./dist/assets/img/home.jpg", alt="hinhanh")
 			a.btn-down(href="javascript:void(0)")
 				i(class="fas fa-hand-point-down")
 		section.banners.grid
 			div.banners-wrap.row
-				+Banners(".dist/assets/img/first-banner.jpg")
-				+Banners(".dist/assets/img/second-banner.jpg")
+				+Banners("./dist/assets/img/first-banner.jpg")
+				+Banners("./dist/assets/img/second-banner.jpg")
 		section.product.grid
 			+SectionHeader("Hàng mới về")
 			+ProductList(listNewProduct)
@@ -28,8 +28,8 @@ block container
 			+ProductList(listSuggest)
 		section.banners.grid
 			div.banners-wrap.row
-				+Banners(".dist/assets/img/third-banner.jpg")
-				+Banners(".dist/assets/img/four-banner.jpg")
+				+Banners("./dist/assets/img/third-banner.jpg")
+				+Banners("./dist/assets/img/four-banner.jpg")
 		section.comment.grid 
 			ul.comment-list.row 
 				+CommentItem(listComment[0])(class="col-12 col-md-4")
@@ -56,6 +56,4 @@ block script
 			} else{
 				menu.style.setProperty('transform', 'initial');
 			}
-			//- menu.style.cssText = "transform: translateX(0)"
-			console.log(menu.style.transform)
 		})
