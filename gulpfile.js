@@ -9,13 +9,13 @@ function sassTask() { return src(sassFiles) .pipe(sass()) .pipe(concat('style.cs
 
 // task 2: pug -> html
 function htmlTask() { return src(htmlFiles) .pipe(pug({ pretty: true })) 
-.pipe(dest('dist')) .pipe(browserSync.stream()); } 
+.pipe(dest('./')) .pipe(browserSync.stream()); } 
 
 // task 3: assets -> disk
 function assetsTask() { return src('assets/**/*') .pipe(dest('dist/assets')) }
 
 // task 4: tạo server với live reload
-function serve() { browserSync.init({ server: { baseDir: './dist' } }); watch('sass/**/*', 
+function serve() { browserSync.init({ server: { baseDir: './' } }); watch('sass/**/*', 
     sassTask); watch('pages/**/*', htmlTask); }
 
 // Gọi gulp bằng 1 dòng lệnh

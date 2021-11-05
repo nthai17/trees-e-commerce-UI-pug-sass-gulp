@@ -327,6 +327,10 @@
                 border-bottom-right-radius: 0;
                 border-top-right-radius: 0;
                 @include mixins.flexBox;
+                display: none;
+                @include mixins.Responsive(SM){
+                    display: flex;
+                }
                 i{
                     font-size: 1.8rem;
                     color: white;
