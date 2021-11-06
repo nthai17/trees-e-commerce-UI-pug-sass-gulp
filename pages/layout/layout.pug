@@ -18,5 +18,15 @@ html(lang="en")
 			block container
 				include ../blocks/mixins
 		block script
+			script(type='text/javascript').
+				let menubtn = document.querySelector('.responsive-nav')
+				menubtn.addEventListener("click", function(){
+					let menu = document.querySelector('.header')
+					if(menu.style.transform === "initial"){
+						menu.style.setProperty('transform', 'translateX(-500px)');
+					} else{
+						menu.style.setProperty('transform', 'initial');
+					}
+				})
 
 			

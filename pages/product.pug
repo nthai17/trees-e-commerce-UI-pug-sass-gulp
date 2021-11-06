@@ -1,5 +1,75 @@
 extends layout/layout
+block container
+	include ./blocks/var
+	-var product = listNewProduct[0]
+	main.content 
+		div.product-direction
+			a(href="index.html")= "Trang chủ"
+			span
+				i(class="fa fa-angle-right")
+			a(href="product.html")= product.itemName
+		section.grid
+			.row 
+				.col-md-9.col-12
+					.product-buy-area
+						.area-img
+							.img-main
+								img(src= product.imgSrc, alt="hình ảnh")
+							.img-sublist
+								.img-subitem
+									img(src= product.imgSrc, alt="hinhanh")
+						.area-buy
+							form(id="form-addcart")
+								h2= product.itemName
+								span= product.itemPrice
+								span Mô tả đang cập nhật
+								span Số lượng:
+								div 
+									button -
+									input(type="text" value="1")
+									button +
+								button.btn-add-to-cart(type="submit") Thêm vào giỏ hàng
+					.product-detail 
+						.detail-title
+							span Thông tin sản phẩm 
+						.detail-content
+							p Tổng hợp tác dụng của cây phúc bồn tử ( quả mâm xôi )
+							p Giúp đẹp da, đen tóc
+							p + Bệnh tiết niệu: xưa kia người ta dùng quả mâm xôi để trị nhiễm trùng đường tiểu, tuy nhiên những thử nghiệm khác không thấy tính kháng khuẩn của dịch quả mâm xôi. Có báo cáo cho rằng nước sắc rễ và lá trị được nhiễm trùng đường tiểu do E. coli.
+							p + Trị sạn thận: mâm xôi làm giảm lượng lớn canxi trong nước tiểu, vì vậy có khả năng chống sạn thận.
+							p + Trị đái tháo đường: Đông y quan niệm đái tháo đường thuộc chứng tiêu khát do chân âm hao tổn. Phế khát gây thích uống nhiều, vị khát gây ăn nhiều không biết no, thận khát sinh ra tiểu nhiều. Quả mâm xôi thanh nhiệt, giải khát, giúp hỗ trợ thanh nhiệt ở các tạng phủ.
+							p + Chống rối loạn cương dương, chữa liệt dương
+							p + Trị viêm gan mạn tính, sưng gan, viêm tuyến vú.
+							p + Trị viêm gan cấp và mạn, viêm tuyến vú, viêm loét miệng.
+				.col-md-3.col-12
+					.product-related
+						.related-title
+							span Sản phẩm tương tự
+						ul.related-list
+							li.related-item
+								a.related-link(href="")
+									.related-img 
+										img(src="./dist/assets/img/camnhung.webp", alt="hinhanh")
+									.related-info 
+										h3 Cây cẩm nhung 
+										span 130.000đ
+							li.related-item
+								a.related-link(href="")
+									.related-img 
+										img(src="./dist/assets/img/camnhung.webp", alt="hinhanh")
+									.related-info 
+										h3 Cây cẩm nhung 
+										span 130.000đ
+							li.related-item
+								a.related-link(href="")
+									.related-img 
+										img(src="./dist/assets/img/camnhung.webp", alt="hinhanh")
+									.related-info 
+										h3 Cây cẩm nhung 
+										span 130.000đ
+						.related-see-more
+							a(href="") Xem thêm
+					.product-banner 
+						img(src="./dist/assets/img/product-banner.jpg", alt="hinhanh") 
+		include ./blocks/footer
 
-block container 
-    main.content 
-        h1 Đây là trang chi tiết sản phẩm

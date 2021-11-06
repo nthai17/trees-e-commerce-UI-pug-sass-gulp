@@ -1,19 +1,21 @@
-@use './helper/variable';
-@use './helper/base';
-@use './module/header';
-@use './module/footer';
-@use './module/mixins';
+@use './helpers/variable';
+@use './helpers/mixins';
+@import './helpers/base';
+@import './module/header';
+@import './module/footer';
+@import './component/product';
+@import './page/product-page';
 
 
 .main-wrap{
-    @include mixins.flexBox($alignItem:flex-start);
+    @include mixins.flexBox($justifyContent: unset,$alignItem:flex-start);
     .responsive-nav{
         height: variable.$headerHeight;
         width: variable.$headerHeight;
-        background-color: rgba(255, 255, 255, 0.753);
+        background-color: variable.$backgroundColor;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -6px;
         text-align: right;
         z-index: 5;
         border-bottom-left-radius: 40%;
@@ -22,12 +24,14 @@
         display: none;
         i{
             font-size: 2.7rem;
-            color: variable.$mainColor
+            color: white
         }
         @include mixins.Responsive(SM){
             display: flex;
             width: 80px;
             height: 80px;
+            border-bottom-left-radius: 50%;
+            border-top-left-radius: 50%;
         }
         @include mixins.Responsive(XS){
             height: variable.$headerHeight;
@@ -36,6 +40,7 @@
     }
     .content{
         margin-left: variable.$headerWidth;
+        width: 100%;
         @include mixins.Responsive(SM){
             margin-left: 0
         }
@@ -323,141 +328,6 @@
         }
     }
 }
-.product__item{
-    margin-bottom: 24px;
-    &-wrap{
-        background-color: white;
-        border: 1px solid variable.$borderColor;
-        .product__item-thumbnail{
-            position: relative;
-            .item-sale-persent{
-                background-color: red;
-                position: absolute;
-                top: 0;
-                left: 0;
-                font-size: 1.5rem;
-                display: block;
-                border-radius: 5px;
-                border-top-left-radius: unset;
-                padding: 2px;
-                z-index: 1;
-            }
-            .item-link{
-                display: block;
-                position: relative;
-                width: 100%;
-                overflow: hidden;
-                &:hover img{
-                    transform: scale(1.1);
-                }
-                &:hover .item-overlay{
-                    display: flex;
-                }
-                .item-overlay{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: rgba(204, 204, 204, 0.349);
-                    z-index: 2;
-                    @include mixins.flexBox;
-                    display: none;
-                    .btn-addto-cart{
-                        background-color: white;
-                        @include mixins.circle;
-                        @include mixins.flexBox;
-                        &:hover{
-                            background-color: variable.$mainColor;
-                        }
-                        &:hover i{
-                            color: white;
-                        }
-                        i{
-                            font-size: 1.8rem;
-                            color: variable.$mainColor;
-                        }
-                    }
-                }
-                img{
-                    width: 100%;
-                    transition: all 0.3s ease;
-                }
-            }
-            & > .btn-addto-cart{
-                position: absolute;
-                top: 0px;
-                right: 0px;
-                background-color: variable.$mainColor;
-                z-index: 3;
-                @include mixins.circle;
-                border-bottom-right-radius: 0;
-                border-top-right-radius: 0;
-                @include mixins.flexBox;
-                display: none;
-                @include mixins.Responsive(SM){
-                    display: flex;
-                    width: 80px;
-                    height: 80px;
-                }
-                @include mixins.Responsive(XS){
-                    width: 50px;
-                    height: 50px;
-                    border-bottom-right-radius: 0;
-                    border-top-right-radius: 0;
-                }
-                i{
-                    font-size: 1.8rem;
-                    color: white;
-                    @include mixins.Responsive(SM){
-                        font-size: 3.6rem;
-                    }
-                    @include mixins.Responsive(XS){
-                        font-size: 1.8rem;
-                    }
-                }
-            }
-        }
-        .product__item-info{
-            padding: 12px;
-            @include mixins.flexBox;
-            flex-direction: column;
-            .item-name{
-                color: variable.$textColor;
-                font-size: 1.4rem;
-                margin-bottom: 10px;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 1;
-                overflow: hidden;
-                &:hover{
-                    color: variable.$mainColor;
-                }
-                @include mixins.Responsive(SM){
-                    font-size: 2.4rem;
-                    padding: 10px 0;
-                }
-                @include mixins.Responsive(XS){
-                    font-size: 1.4rem;
-                    padding: unset;
-                }
-            }
-            .item-price{
-                color: variable.$mainColor;
-                font: {
-                    size: 1.4rem;
-                    weight: 700
-                }
-                @include mixins.Responsive(SM){
-                    font-size: 2.4rem;
-                }
-                @include mixins.Responsive(XS){
-                    font-size: 1.4rem;
-                }
-            }
-        }
-    }
-        
-}
+
 
 

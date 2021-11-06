@@ -1,0 +1,227 @@
+@use "../helpers/mixins";
+@use "../helpers/variable" as var;
+
+.product-direction{
+    height: 36px;
+    background-color: #f5f5f5;
+    @include mixins.flexBox($justifyContent: start);
+    a{
+        padding: 10px;
+        display: block;
+        color: black;
+        font-size: 1.4rem;
+        &:hover{
+            color: var.$mainColor;
+        }
+    }
+    span{
+        color: white;
+        color: black;
+        font-size: 1.4rem;
+    }
+    @include mixins.Responsive(TAB){
+        height: 46px;
+        a{
+            font-size: 1.6rem;
+        }
+    }
+}
+section{
+    .product-buy-area{
+        margin-top: 20px;
+        @include mixins.flexBox($justifyContent: flex-start,$alignItem:flex-start);
+        @include mixins.Responsive(SM){
+            flex-wrap: wrap;
+        }
+        .area-img{
+            width: 40%;
+            @include mixins.Responsive(XS){
+                width: 100%;
+            }
+            .img-main{
+                img{
+                    border: 1px solid var.$borderColor;
+                    width: 100%;
+                }
+            }
+            .img-sublist{
+                margin-top: 8px;
+                @include mixins.flexBox($justifyContent: space-between);
+                .img-subitem{
+                    width: 23%;
+                    height: 100%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid var.$borderColor;
+                    }
+                }
+            }
+        }
+        .area-buy{
+            margin-left: 10px;
+            form{
+                span{
+                    display: block;
+                    margin-bottom: 18px;
+                    font-size: 1.4rem;
+                    &:first-of-type{
+                        color: var.$mainColor;
+                        font-size: 2.4rem;
+                        font-weight: 700;
+                    }
+                    &:nth-of-type(2){
+                        font-style: italic;
+                    }
+                }
+                div{
+                    margin-bottom: 20px;
+                    button{
+                        width: 36px;
+                        height: 36px;
+                    }
+                    input{
+                        height: 36px;
+                        text-align: center;
+                        border: 1px solid var.$borderColor;
+                    }
+                }
+                button{
+                    padding: 10px 12px;
+                    background-color: var.$mainColor;
+                    border: none;
+                    outline: none;
+                    color: white;
+                }
+                @include mixins.Responsive(TAB){
+                    button{
+                        font-size: 1.8rem;
+                    }
+                    div{
+                        input{
+                            height: 40px;
+                            margin: 0 10px;
+                            font-size: 2rem;
+                        }
+                        button{
+                            height: 40px;
+                            width: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .product-detail{
+        margin-top: 60px;
+        .detail-title{
+            height: 40px;
+            border-top: 1px solid var.$borderColor;
+            border-bottom: 1px solid var.$borderColor;
+            span{
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 40px;
+            }
+        }
+        .detail-content{
+            margin-top: 20px;
+            p{
+                font-size: 1.4rem;
+                color: #707070;
+                line-height: 1.7;
+                @include mixins.Responsive(TAB){
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .product-related{
+        .related-title{
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        .related-list{
+            padding-top: 10px;
+            .related-item{
+                display: block;
+                height: 120px;
+                @include mixins.flexBox;
+                border-bottom: 1px solid var.$borderColor;
+                &:first-child{
+                    border-top: 1px solid var.$borderColor;
+                }
+                .related-link{
+                    @include mixins.flexBox;
+                    height: 80px;
+                    .related-img{
+                        width: 80px;
+                        height: 100%;
+                        margin-right: 10px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .related-info{
+                        color: var.$textColor;
+                        h3{
+                            margin-bottom: 6px;
+                        }
+                        span{
+                            color: var.$mainColor;
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                        }
+                        @include mixins.Responsive(TAB){
+                            h3, span{font-size: 1.7rem;}
+                        }
+                    }
+                }
+            }
+        }
+        .related-see-more{
+            padding: 10px;
+            font-size: 1.5rem;
+            a{
+                color: var.$textColor;
+                &:hover{
+                    color: var.$mainColor;
+                }
+                @include mixins.Responsive(TAB){
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        @include mixins.Responsive(SM){
+            margin-top: 30px;
+            .related-title{
+                font-size: 1.8rem;
+            }
+            .related-list{
+                .related-item{
+                    justify-content: flex-start;
+                    .related-info{
+                        h3{
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+            .related-see-more{
+                padding: 18px 10px;
+            }
+        }
+    }
+    .product-banner{
+        img{
+            width: 100%;
+        }
+        @include mixins.Responsive(SM){
+            text-align: center;
+            margin-bottom: 20px;
+            img{width: 80%;}
+        }
+    }
+}

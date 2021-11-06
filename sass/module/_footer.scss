@@ -1,5 +1,5 @@
-@use "./helper/variable";
-@use "../module/mixins";
+@use "../helpers/variable";
+@use "../helpers/mixins";
 
 .footer{
     background-color: variable.$backgroundColor;

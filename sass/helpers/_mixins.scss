@@ -24,6 +24,9 @@ $XL:   1200px;
   @else if $canvas == SM {
    @media only screen and (max-width: $SM) { @content; } 
   }
+  @if $canvas == TAB {
+    @media only screen and (min-width: $XS) and (max-width: $SM) { @content; } 
+   }
   @else if $canvas == MD {
    @media only screen and (max-width: $MD) { @content; } 
   }

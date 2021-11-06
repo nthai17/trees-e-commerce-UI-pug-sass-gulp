@@ -13,7 +13,7 @@
     <div class="main-wrap">
       <section class="responsive-nav"> <i class="fas fa-angle-double-right"></i></section>
       <header class="header">
-        <div class="header__logo"><img src="./dist/assets/img/logo.webp" alt="logo"></div>
+        <div class="header__logo"><a href="index.html"><img src="./dist/assets/img/logo.webp" alt="logo"></a></div>
         <div class="header__sign"><a class="sign-in" href="javascript:void(0)">Đăng nhập</a><span class="separate">/</span><a class="sign-up" href="javascript:void(0)">Đăng ký</a></div>
         <div class="header__cart"> <a class="cart-link">Giỏ hàng
             <div class="cart-quantity">0</div></a></div>
@@ -50,8 +50,146 @@
         </div>
       </header>
       <main class="content"> 
-        <h1>Đây là trang chi tiết sản phẩm</h1>
+        <div class="product-direction"><a href="index.html">Trang chủ</a><span><i class="fa fa-angle-right"></i></span><a href="product.html">Cây kim tiền</a></div>
+        <section class="grid">
+          <div class="row"> 
+            <div class="col-md-9 col-12">
+              <div class="product-buy-area">
+                <div class="area-img">
+                  <div class="img-main"><img src="./dist/assets/img/caykimtien.webp" alt="hình ảnh"></div>
+                  <div class="img-sublist">
+                    <div class="img-subitem"><img src="./dist/assets/img/caykimtien.webp" alt="hinhanh"></div>
+                  </div>
+                </div>
+                <div class="area-buy">
+                  <form id="form-addcart">
+                    <h2>Cây kim tiền</h2><span>145.000</span><span>Mô tả đang cập nhật</span><span>Số lượng:</span>
+                    <div> 
+                      <button>-</button>
+                      <input type="text" value="1">
+                      <button>+</button>
+                    </div>
+                    <button class="btn-add-to-cart" type="submit">Thêm vào giỏ hàng</button>
+                  </form>
+                </div>
+              </div>
+              <div class="product-detail"> 
+                <div class="detail-title"><span>Thông tin sản phẩm </span></div>
+                <div class="detail-content">
+                  <p>Tổng hợp tác dụng của cây phúc bồn tử ( quả mâm xôi )</p>
+                  <p>Giúp đẹp da, đen tóc</p>
+                  <p>+ Bệnh tiết niệu: xưa kia người ta dùng quả mâm xôi để trị nhiễm trùng đường tiểu, tuy nhiên những thử nghiệm khác không thấy tính kháng khuẩn của dịch quả mâm xôi. Có báo cáo cho rằng nước sắc rễ và lá trị được nhiễm trùng đường tiểu do E. coli.</p>
+                  <p>+ Trị sạn thận: mâm xôi làm giảm lượng lớn canxi trong nước tiểu, vì vậy có khả năng chống sạn thận.</p>
+                  <p>+ Trị đái tháo đường: Đông y quan niệm đái tháo đường thuộc chứng tiêu khát do chân âm hao tổn. Phế khát gây thích uống nhiều, vị khát gây ăn nhiều không biết no, thận khát sinh ra tiểu nhiều. Quả mâm xôi thanh nhiệt, giải khát, giúp hỗ trợ thanh nhiệt ở các tạng phủ.</p>
+                  <p>+ Chống rối loạn cương dương, chữa liệt dương</p>
+                  <p>+ Trị viêm gan mạn tính, sưng gan, viêm tuyến vú.</p>
+                  <p>+ Trị viêm gan cấp và mạn, viêm tuyến vú, viêm loét miệng.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12">
+              <div class="product-related">
+                <div class="related-title"><span>Sản phẩm tương tự</span></div>
+                <ul class="related-list">
+                  <li class="related-item"><a class="related-link" href="">
+                      <div class="related-img"> <img src="./dist/assets/img/camnhung.webp" alt="hinhanh"></div>
+                      <div class="related-info"> 
+                        <h3>Cây cẩm nhung </h3><span>130.000đ</span>
+                      </div></a></li>
+                  <li class="related-item"><a class="related-link" href="">
+                      <div class="related-img"> <img src="./dist/assets/img/camnhung.webp" alt="hinhanh"></div>
+                      <div class="related-info"> 
+                        <h3>Cây cẩm nhung </h3><span>130.000đ</span>
+                      </div></a></li>
+                  <li class="related-item"><a class="related-link" href="">
+                      <div class="related-img"> <img src="./dist/assets/img/camnhung.webp" alt="hinhanh"></div>
+                      <div class="related-info"> 
+                        <h3>Cây cẩm nhung </h3><span>130.000đ</span>
+                      </div></a></li>
+                </ul>
+                <div class="related-see-more"><a href="">Xem thêm</a></div>
+              </div>
+              <div class="product-banner"> <img src="./dist/assets/img/product-banner.jpg" alt="hinhanh"></div>
+            </div>
+          </div>
+        </section>
+        <footer class="footer grid"> 
+          <div class="row">
+            <div class="col-l-3 col-md-6 col-6 footer-contact">LIÊN HỆ 
+              <ul>
+                <li> 
+                  <div><i class="fas fa-map-marker-alt"></i></div><span>Nam Từ Liêm, Hà Nội</span>
+                </li>
+                <li> 
+                  <div><i class="fas fa-phone"></i></div><span>1900 9999</span>
+                </li>
+                <li>
+                  <div><i class="fas fa-envelope"></i></div><span>ego@gmail.com</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-l-3 col-md-6 col-6">VỀ CHÚNG TÔI
+              <ul>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Trang chủ</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Tất cả sản phẩm</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Tin tức</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Về Ego Garden</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Liên hệ</a>
+                      </li>
+              </ul>
+            </div>
+            <div class="col-l-3 col-md-6 col-6">THÔNG TIN
+              <ul>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Bài viết</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Tất cả sản phẩm</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Tin tức</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Về Ego Garden</a>
+                      </li>
+              </ul>
+            </div>
+            <div class="col-l-3 col-md-6 col-6">HỖ TRỢ
+              <ul>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Hotline</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Email</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-connect row"> 
+            <div class="mail-input col-12 col-md-6"> 
+              <input type="email" placeholder="Nhập email để nhận tin khuyến mãi">
+              <button><i class="fas fa-envelope"></i><span>GỬI NGAY</span></button>
+            </div>
+            <div class="connection col-12 col-md-5">
+              <div class="facebook connection-item"><a href="javascript:void(0)"><i class="fab fa-facebook-square"></i></a></div>
+              <div class="twitter connection-item"> <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></div>
+              <div class="google connection-item"> <a href="javascript:void(0)"><i class="fab fa-google"></i></a></div>
+              <div class="rss connection-item"><a href="javascript:void(0)"><i class="fas fa-rss"></i></a></div>
+              <div class="youtube connection-item"><a href="javascript:void(0)"><i class="fab fa-youtube"></i></a></div>
+            </div>
+          </div>
+          <div class="footer-copyright">Made by NTD</div>
+        </footer>
       </main>
     </div>
+    <script type="text/javascript">
+      let menubtn = document.querySelector('.responsive-nav')
+      menubtn.addEventListener("click", function(){
+      	let menu = document.querySelector('.header')
+      	if(menu.style.transform === "initial"){
+      		menu.style.setProperty('transform', 'translateX(-500px)');
+      	} else{
+      		menu.style.setProperty('transform', 'initial');
+      	}
+      })
+    </script>
   </body>
 </html>
